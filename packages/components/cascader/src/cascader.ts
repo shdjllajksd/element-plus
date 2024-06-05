@@ -11,6 +11,7 @@ import type {
 
 export const cascaderProps = buildProps({
   ...CommonProps,
+  isCustomPanel: Boolean,
   /**
    * @description size of input
    */

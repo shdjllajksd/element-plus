@@ -157,7 +157,13 @@
         :render-label="$slots.default"
         @expand-change="handleExpandChange"
         @close="$nextTick(() => togglePopperVisible(false))"
-      />
+      >
+        <template #customPanel>
+          <div v-if="props.isCustomPanel" class="el-scrollbar el-cascader-menu">
+            <slot name="customPanel" />
+          </div>
+        </template>
+      </el-cascader-panel>
       <el-scrollbar
         v-if="filterable"
         v-show="filtering"

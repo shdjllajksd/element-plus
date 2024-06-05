@@ -3,6 +3,7 @@
     :class="[ns.b('panel'), ns.is('bordered', border)]"
     @keydown="handleKeyDown"
   >
+    <slot name="customPanel" />
     <el-cascader-menu
       v-for="(menu, index) in menus"
       :key="index"
